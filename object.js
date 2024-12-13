@@ -11,6 +11,7 @@ function doubleNumbers(arr) {
 console.log(doubleNumbers(arr));
 
 // console.log(doubleNumbers([2, 5, 100])); // [4, 10, 200]
+//ex-2
 // Take an array of numbers and make them strings
 let ar = [2, 5, 100];
 function stringUp(ar) {
@@ -21,11 +22,9 @@ function stringUp(ar) {
   return newAr;
 }
 console.log(stringUp(ar));
+//ex-3
 // 3) Capitalize each of an array of names
-function capitalizeNames(name) {
-  // your code here
-}
-let names = ["john", "JACOB", "jinGleHeimer", "schmidt"];
+let names = ["john", "JaCOB", "jinGleHeimer", "schmidt"];
 function capitalizeNames(name) {
   return names.map(
     (
@@ -35,7 +34,7 @@ function capitalizeNames(name) {
 }
 console.log(capitalizeNames(names));
 // console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"])); // ["John", "Jacob", "Jingleheimer", "Schmidt"]
-
+//ex-4
 // 4) Make an array of strings of the names
 // l4) Make an array of strings of the names
 function namesOnly(arr) {
@@ -70,7 +69,7 @@ console.log(
   ])
 );
 ["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"];
-
+//ex-5
 // 5) Make an array of strings of the names saying whether or not they can go to The Matrix
 function makeStrings(arr) {
   let okay = [];
@@ -78,7 +77,7 @@ function makeStrings(arr) {
     if (arr[i].age > 19) {
       okay.push(`${arr[i].name} can go to The Matrix. Age : ${arr[i].age}`);
     } else {
-      okay.push;
+      okay.push(`${arr[i].name} can't go to The Matrix. Age : ${arr[i].age}`)
     }
   }
   return okay;
@@ -113,47 +112,67 @@ console.log(
 // "Paris Hilton is under age!!",
 // "Kayne West is under age!!",
 // "Bob Ziroll can go to The Matrix"]
-
-/*
-  Write a function called doubleValues which accepts an array and returns a new array with all the values in the array passed to the function doubled
+//ex-6
+  // Write a function called doubleValues which accepts an array and returns a new array with all the values in the array
+  //  passed to the function doubled
    
-  Examples:
-      doubleValues([1,2,3]) // [2,4,6]
-      doubleValues([5,1,2,3,10]) // [10,2,4,6,20]
-   
-  */
-function doubleValues(arr) {}
-// console.log(doubleValues([1,2,3]));
-/*
-  Write a function called onlyEvenValues which accepts an array and returns a new array with only the even values in the array passed to the function
-   
-  Examples:
+  // Examples:
+  let ar1 = [1, 2, 3,5,1,2,3,10]; // [2,4,6,10,2,4,6,20]
+function doubleValues(ar1) {
+  let result= [] ;
+  for(i=0;i<ar1.length;i++){
+    result.push(ar1[i]*2);
+  }
+return result
+}
+console.log(`double value bol:${doubleValues(ar1)}`);
+//ex-7
+ // Write a function called onlyEvenValues which accepts an array and returns
+ // a new array with only the even values in the array passed to the function
+   //Examples: ene true false-r tulhene
       onlyEvenValues([1,2,3]) // [2]
       onlyEvenValues([5,1,2,3,10]) // [2,10]
-   
-  */
-// function onlyEvenValues(arr) {}
-// console.log(onlyEvenValues([1, 2, 3, 4, 5, 7, 8, 9, 10, 11]));
 
-// console.log(filteredNumbers);F
+      function onlyEvenValues(arr){
+        let result=[];
+        for(i=0;i<arr.length;i++){
+          result.push(arr[i]%2===0)
+        }
+        return result
+      }
+   console.log(`Ene arraynii tegsh too bol; ${onlyEvenValues([1,2,3])}`)
+ function onlyEvenValues(arr){
+    return arr.filter(num=>num%2===0);//filterdsen tohioldold arrni toogooroo tulhene.
+  }
 
-// console.log(`Initial array ${numbers}`);
+console.log(`even toonuud bol;${onlyEvenValues([1, 2, 3, 4, 5, 7, 8, 9, 10, 11])}`);
+//ex-
+let numbers=([1, 2, 3, 4, 5, 7, 8, 9, 10, 11])
 
-// numbers.pop();
-// console.log(`Popped array ${numbers}`);
+function initialArray(numbers){
+  let result=[];
+  for(i=0;i<numbers.length;i++){
+    return numbers.filter(num=>num%2!==0)
 
-// numbers.push(123);
-// console.log(`Pushed array ${numbers}`);
+}
+}
+console.log(`Initial array ${initialArray(numbers)}`);
 
-// numbers.shift();
-// console.log(`shifted array ${numbers}`);
+numbers.pop();
+console.log(`Popped array ${numbers}`);
 
-// numbers.unshift(1234123);
-// console.log(`Unshifted array ${numbers}`);
+numbers.push(123);
+console.log(`Pushed array ${numbers}`);
 
-// const string = "string";
-// console.log(string.split(""));
-// const arrayOfStings = string.split("");
+numbers.shift();
+console.log(`shifted array ${numbers}`);
+
+numbers.unshift(1234123);
+console.log(`Unshifted array ${numbers}`);
+
+const string = "string";
+console.log(string.split(""));
+const arrayOfStings = string.split("");
 
 const originalFlavors = [
   "Banana Nut Fudge",
@@ -188,12 +207,14 @@ const originalFlavors = [
   "Vanilla",
   "Vanilla Burnt Almond",
 ];
+function 
 
 /* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
    
   (1) an array
    
-  Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.
+  Your function should return a boolean TRUE 
+  if the length of the array is 31 and FALSE if the length of the array is NOT 31.
    
    
    
