@@ -77,7 +77,7 @@ function makeStrings(arr) {
     if (arr[i].age > 19) {
       okay.push(`${arr[i].name} can go to The Matrix. Age : ${arr[i].age}`);
     } else {
-      okay.push(`${arr[i].name} can't go to The Matrix. Age : ${arr[i].age}`)
+      okay.push(`${arr[i].name} can't go to The Matrix. Age : ${arr[i].age}`);
     }
   }
   return okay;
@@ -113,48 +113,49 @@ console.log(
 // "Kayne West is under age!!",
 // "Bob Ziroll can go to The Matrix"]
 //ex-6
-  // Write a function called doubleValues which accepts an array and returns a new array with all the values in the array
-  //  passed to the function doubled
-   
-  // Examples:
-  let ar1 = [1, 2, 3,5,1,2,3,10]; // [2,4,6,10,2,4,6,20]
+// Write a function called doubleValues which accepts an array and returns a new array with all the values in the array
+//  passed to the function doubled
+
+// Examples:
+let ar1 = [1, 2, 3, 5, 1, 2, 3, 10]; // [2,4,6,10,2,4,6,20]
 function doubleValues(ar1) {
-  let result= [] ;
-  for(i=0;i<ar1.length;i++){
-    result.push(ar1[i]*2);
+  let result = [];
+  for (i = 0; i < ar1.length; i++) {
+    result.push(ar1[i] * 2);
   }
-return result
+  return result;
 }
 console.log(`double value bol:${doubleValues(ar1)}`);
 //ex-7
- // Write a function called onlyEvenValues which accepts an array and returns
- // a new array with only the even values in the array passed to the function
-   //Examples: ene true false-r tulhene
-      onlyEvenValues([1,2,3]) // [2]
-      onlyEvenValues([5,1,2,3,10]) // [2,10]
+// Write a function called onlyEvenValues which accepts an array and returns
+// a new array with only the even values in the array passed to the function
+//Examples: ene true false-r tulhene
+onlyEvenValues([1, 2, 3]); // [2]
+onlyEvenValues([5, 1, 2, 3, 10]); // [2,10]
 
-      function onlyEvenValues(arr){
-        let result=[];
-        for(i=0;i<arr.length;i++){
-          result.push(arr[i]%2===0)
-        }
-        return result
-      }
-   console.log(`Ene arraynii tegsh too bol; ${onlyEvenValues([1,2,3])}`)
- function onlyEvenValues(arr){
-    return arr.filter(num=>num%2===0);//filterdsen tohioldold arrni toogooroo tulhene.
+function onlyEvenValues(arr) {
+  let result = [];
+  for (i = 0; i < arr.length; i++) {
+    result.push(arr[i] % 2 === 0);
   }
-
-console.log(`even toonuud bol;${onlyEvenValues([1, 2, 3, 4, 5, 7, 8, 9, 10, 11])}`);
-//ex-
-let numbers=([1, 2, 3, 4, 5, 7, 8, 9, 10, 11])
-
-function initialArray(numbers){
-  let result=[];
-  for(i=0;i<numbers.length;i++){
-    return numbers.filter(num=>num%2!==0)
-
+  return result;
 }
+console.log(`Ene arraynii tegsh too bol; ${onlyEvenValues([1, 2, 3])}`);
+function onlyEvenValues(arr) {
+  return arr.filter((num) => num % 2 === 0); //filterdsen tohioldold arrni toogooroo tulhene.
+}
+
+console.log(
+  `even toonuud bol;${onlyEvenValues([1, 2, 3, 4, 5, 7, 8, 9, 10, 11])}`
+);
+//ex-
+let numbers = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11];
+
+function initialArray(numbers) {
+  let result = [];
+  for (i = 0; i < numbers.length; i++) {
+    return numbers.filter((num) => num % 2 !== 0);
+  }
 }
 console.log(`Initial array ${initialArray(numbers)}`);
 
@@ -207,7 +208,18 @@ const originalFlavors = [
   "Vanilla",
   "Vanilla Burnt Almond",
 ];
-function 
+console.log(`anhnii array;${originalFlavors.length}${originalFlavors} `);
+function checkLength(originalFlavors) {
+  for (i = 0; i < originalFlavors.length; i++)
+    if (originalFlavors.length === 31) {
+      return true;
+    } else {
+      return false;
+    }
+}
+
+console.log(checkLength(originalFlavors));
+console.log(`ene Array urt ni ;${originalFlavors.length}`);
 
 /* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
    
@@ -215,14 +227,13 @@ function
    
   Your function should return a boolean TRUE 
   if the length of the array is 31 and FALSE if the length of the array is NOT 31.
-   
-   
-   
-  To save you from having to count the items above, you can assume that length of originalFlavors is 31. You may also want to test your function by creating and passing an array of a different length, to make sure it returns FALSE if length is not 31.
+  To save you from having to count the items above, you can assume that length of originalFlavors is 31. 
+  You may also want to test your function by creating and passing an array of a different length, to make sure it returns FALSE if length is not 31.
    
   i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-/* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor.
+/* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. 
+You need to modify the array to include this flavor.
    
   Your function should accept:
    
@@ -234,19 +245,51 @@ function
   Your function should add the flavor to the front of the array and console.log the resulting array.
    
   For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */
+let addFlavorArray = [
+  "Rainbow Sherbert",
+  "Banana Nut Fudge",
+  "Vanilla Burnt Almond",
+];
 
-function addFlavor(array, flavor) {}
+function addFlavor(originalFlavors, addFlavorArray) {
+  for (i = 0; i < addFlavorArray.length; i++)
+    if (originalFlavors.includes(addFlavorArray[i])) {
+      console.log(`ali hediin arrayd bn ${addFlavorArray[i]}`);
+    } else {
+      originalFlavors.push(addFlavorArray[i]);
+      console.log(`${addFlavorArray[i]} nemegdlee`);
+    }
+  return originalFlavors;
+}
+console.log(addFlavor(originalFlavors, addFlavorArray));
+console.log(originalFlavors.length);
+
+originalFlavors.pop(), console.log(`Popped array ${originalFlavors}`);
+console.log(originalFlavors.length);
+
+function removeIndex(originalFlavors) {
+  for (i = 0; i < originalFlavors.length; i++);
+  let index = originalFlavors.indexOf("Vanilla");
+  if (index !== -1) {
+    originalFlavors.splice(index, 1);
+  }
+  return originalFlavors;
+}
+
+console.log(removeIndex(originalFlavors));
+console.log(originalFlavors);
+let chocolate = originalFlavors.filter(
+  (value) => "Chocolate" == value.split(" ")[0] // hervee neg stringni 2ugin negiig ni filter hih bol split hiine
+);
+let choc = originalFlavors.map;
+console.log(chocolate);
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array.
    
   Your function should accept:
    
-  (1) an array
-   
+  (1) an array 
   Your function should remove a flavor from the end of the array and console.log the resulting array.
-   
-   
-   
   For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
@@ -255,10 +298,12 @@ function addFlavor(array, flavor) {}
    
   (1) an array
   (2) an index
+
    
   For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-/* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array.
+/* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
+as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array.
    
   Your function should accept:
    
@@ -268,6 +313,7 @@ function addFlavor(array, flavor) {}
   For example, removeFlavorByName(originalFlavors, "Vanilla") would return an array with the length 30 including all of the flavors except Vanilla.
    
   Hint: You can use .splice() for this
+
    
   */
 
@@ -307,7 +353,8 @@ function addFlavor(array, flavor) {}
 // console.log(filterByWord(originalFlavors, "chocolate"));
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/
 
-/* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
+/* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, 
+but can test with originalFlavors.
    
   Your function should accept:
    
@@ -316,7 +363,25 @@ function addFlavor(array, flavor) {}
   and should return the average number of words per item in the array.
    
   For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
+// (1) an array
 
-function getAverageWordLength(/*code here*/) {
-  /*code here*/
-}
+// and should return the average number of words per item in the array.
+
+// For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
+// console.log(arrayWordslength);
+
+// f (1) an array
+let wordLength = originalFlavors.map((item) => item.split("").length);
+console.log(wordLength);
+let totalwords = wordLength.reduce((total) => (total, 0));
+
+console.log(totalwords);
+//   console.log(originalFlavors.split(" "));
+// }
+// function cho(originalFlavors) {
+//   for (i = 0; i < originalFlavors.length; i++)
+//     if (originalFlavors.includes(chocolate)) {
+//       return originalFlavors;
+//     }
+// }
+// console.log(cho(originalFlavors));
