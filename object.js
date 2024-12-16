@@ -484,8 +484,11 @@ console.log(r.map((value) => value * length));
 // Find the correct Index location
 // Return the index location of an element from a given array. First argument is the array you'd like to search and the second one is the element (either string/number) to look for.
 //index-n bairshilaar ni butsaana
+
+let pos = ["github", "gitlab", "bitbucket", "apollo"];
+
 // Example:
-// > console.log(findIndex(['github', 'gitlab', 'bitbucket', 'apollo'], 'gitlab'));
+// > console.log(findIndex(['github', 'gitlab', 'bitbucket', 'apollo'], 'gitlab']));
 // > 1
 //indexof -g ashiglasan bai bolson utgaa zarlaad, indexof uguud teged daraa ni ter zarlasan utgaa hevlene.
 let arq = ["github", "gitlab", "bitbucket", "apollo"];
@@ -575,15 +578,15 @@ const zooAnimals = [
   },
 ];
 // const displayNames = [];
-    
+
 // zooAnimals.forEach(function animalNames(element){
-    
+
 // var display = "name: " + element.animal_name + ", " + "scientific: " + element.scientific_name
-   
+
 //  displayNames.push(display);
-     
+
 //   })
-//   console.log(displayNames); 
+//   console.log(displayNames);
 // Функц дуудаж гүйцэтгэх
 
 // //  Request 1: .forEach()
@@ -596,19 +599,24 @@ const zooAnimals = [
 
 // // pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 function displayNames(array) {
-
   array.forEach(function (element) {
     console.log(
-      `name: ${element.animal_name}, scientific: ${element.scientific_name}`
+      `name: ${element.animal_name.toLowerCase()}, scientific: ${
+        element.scientific_name
+      }`
     );
   });
 }
 console.log(displayNames(zooAnimals));
+const lowCaseAnimalNames = zooAnimals.map((animal) =>
+  animal.animal_name.toLowerCase()
+);
+console.log(lowCaseAnimalNames);
 
 // /* Request 2: .map()
 
 // The zoos need a list of all their animal's names (animal_name only) converted to lower case.
-// Using map, create a new array of strings named lowCaseAnimalNames, 
+// Using map, create a new array of strings named lowCaseAnimalNames,
 //each string following this pattern: "jackal, asiatic". Log the resut.
 
 // */
